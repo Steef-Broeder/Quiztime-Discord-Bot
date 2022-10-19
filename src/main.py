@@ -7,7 +7,7 @@ intents.message_content = True
 
 client = discord.Client(intents=intents)
 
-with open('token.txt') as token_file:
+with open('token.txt', 'r') as token_file:
     TOKEN = token_file.readlines()
 
 @client.event
