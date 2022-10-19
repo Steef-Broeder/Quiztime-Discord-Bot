@@ -7,9 +7,6 @@ intents.message_content = True
 
 client = discord.Client(intents=intents)
 
-with open('token.txt', 'r') as token_file:
-    TOKEN = token_file.readlines()
-
 @client.event
 async def on_ready():
     print(f'We have logged in as {client.user}')
@@ -22,4 +19,4 @@ async def on_message(message):
     if message.content.startswith('$hello'):
         await message.channel.send('Hello!')
 
-client.run(token=TOKEN)
+client.run(token="MTAzMTg0OTMwODA2MTk2MjI3MA.GQEm2i.LCEAnBACy6jG-OMYugjvFi4NE1mBWnsiNP8NKQ")
