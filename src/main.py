@@ -10,7 +10,7 @@ client = discord.Client(intents=intents)
 reactions = {
     "Silly":"Ga lekker onder n truck liggen man",
     "xshadowshots":"Jaja hou je bek maar",
-    "CoasterCrazy42":"Ik hoop dat je achtbaan breekt"
+    "CoasterCrazy42":"Ik hoop dat jouw achtbaan breekt"
 }
 
 with open('config.json', 'r') as cfg:
