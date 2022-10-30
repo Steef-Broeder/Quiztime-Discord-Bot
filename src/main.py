@@ -36,70 +36,9 @@ def read_page(page_id:str, headers:dict):
 	with open("./data/pg.json", "w", encoding="utf8") as f:
 		json.dump(data, f, ensure_ascii=False)
 
-def create_page(database_id:str, headers:dict):
+def create_page(database_id:str, headers:dict, page_content:dict):
 	create_url = "https://api.notion.com/v1/pages"
-	page_data_new = {
-	"parent": { "database_id": database_id },
-	"icon": {
-		"emoji": "🥬"
-	},
-		"cover": {
-			"external": {
-				"url": "https://upload.wikimedia.org/wikipedia/commons/6/62/Tuscankale.jpg"
-			}
-		},
-		"properties": {
-			"Name": {
-				"title": [
-					{
-						"text": {
-							"content": "Tuscan Kale"
-						}
-					}
-				]
-			},
-			"Description": {
-				"rich_text": [
-					{
-						"text": {
-							"content": "A dark green leafy vegetable"
-						}
-					}
-				]
-			},
-			"Tags": {
-				"select": {
-					"name": "Vegetable"
-				}
-			},
-			"Price": { "number": 2.5 }
-		},
-		"children": [
-			{
-				"object": "block",
-				"type": "heading_2",
-				"heading_2": {
-					"rich_text": [{ "type": "text", "text": { "content": "Lacinato kale" } }]
-				}
-			},
-			{
-				"object": "block",
-				"type": "paragraph",
-				"paragraph": {
-					"rich_text": [
-						{
-							"type": "text",
-							"text": {
-								"content": "Lacinato kale is a variety of kale with a long tradition in Italian cuisine, especially that of Tuscany. It is also known as Tuscan kale, Italian kale, dinosaur kale, kale, flat back kale, palm tree kale, or black Tuscan palm.",
-								"link": { "url": "https://en.wikipedia.org/wiki/Lacinato_kale" }
-							}
-						}
-					]
-				}
-			}
-		]
-	}
-	data = json.dumps(page_data_new)
+	data = json.dumps(page_content)
 
 	res = requests.request("POST", create_url, headers=headers, data=data)
 
@@ -107,3 +46,79 @@ def create_page(database_id:str, headers:dict):
 	print(res.content)
 
 # ----------PROGRAM----------
+read_page("f362fa40-177b-4324-ba6e-cb85da09af4e", headers)
+
+page_content = {
+    "object": "page",
+    "id": "f362fa40-177b-4324-ba6e-cb85da09af4e",
+    "created_time": "2022-10-30T22:27:00.000Z",
+    "last_edited_time": "2022-10-30T23:18:00.000Z",
+    "created_by": {
+        "object": "user",
+        "id": "1735f0bd-d9a6-40e3-9780-de77c88e145a"
+    },
+    "last_edited_by": {
+        "object": "user",
+        "id": "1735f0bd-d9a6-40e3-9780-de77c88e145a"
+    },
+    "cover": null,
+    "icon": null,
+    "parent": {
+        "type": "database_id",
+        "database_id": "b1f65b43-7a8f-4ee2-8007-1c0a5db20d06"
+    },
+    "archived": false,
+    "properties": {
+        "Source": {
+            "id": "%40NFs",
+            "type": "select",
+            "select": {
+                "id": "21d13b6f-e744-4511-b1d4-59f28e1e5eae",
+                "name": "Marc Krueger",
+                "color": "green"
+            }
+        },
+        "Day": {
+            "id": "DtR%3E",
+            "type": "select",
+            "select": {
+                "id": "UnUD",
+                "name": "#TuesdayQuiz",
+                "color": "purple"
+            }
+        },
+        "Status": {
+            "id": "_kmJ",
+            "type": "status",
+            "status": {
+                "id": "f11ee725-5d9c-4acf-a0ad-7478e2f22f31",
+                "name": "Not started",
+                "color": "default"
+            }
+        },
+        "Name": {
+            "id": "title",
+            "type": "title",
+            "title": [
+                {
+                    "type": "text",
+                    "text": {
+                        "content": "Tuesday 25 October 2022",
+                        "link": null
+                    },
+                    "annotations": {
+                        "bold": false,
+                        "italic": false,
+                        "strikethrough": false,
+                        "underline": false,
+                        "code": false,
+                        "color": "default"
+                    },
+                    "plain_text": "Tuesday 25 October 2022",
+                    "href": null
+                }
+            ]
+        }
+    },
+    "url": "https://www.notion.so/Tuesday-25-October-2022-f362fa40177b4324ba6ecb85da09af4e"
+}
