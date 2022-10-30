@@ -15,7 +15,10 @@
         "id": "1735f0bd-d9a6-40e3-9780-de77c88e145a"
       },
       "cover": null,
-      "icon": { "type": "emoji", "emoji": "🙃" },
+      "icon": {
+        "type": "emoji",
+        "emoji": "🙃"
+      },
       "parent": {
         "type": "database_id",
         "database_id": "b1f65b43-7a8f-4ee2-8007-1c0a5db20d06"
@@ -44,7 +47,10 @@
           "title": [
             {
               "type": "text",
-              "text": { "content": "test13453454545a", "link": null },
+              "text": {
+                "content": "test13453454545a",
+                "link": null
+              },
               "annotations": {
                 "bold": false,
                 "italic": false,
@@ -75,7 +81,10 @@
         "id": "1735f0bd-d9a6-40e3-9780-de77c88e145a"
       },
       "cover": null,
-      "icon": { "type": "emoji", "emoji": "📊" },
+      "icon": {
+        "type": "emoji",
+        "emoji": "📊"
+      },
       "parent": {
         "type": "database_id",
         "database_id": "b1f65b43-7a8f-4ee2-8007-1c0a5db20d06"
@@ -104,7 +113,10 @@
           "title": [
             {
               "type": "text",
-              "text": { "content": "s3tr35423w45", "link": null },
+              "text": {
+                "content": "s3tr35423w45",
+                "link": null
+              },
               "annotations": {
                 "bold": false,
                 "italic": false,
@@ -142,13 +154,21 @@
       },
       "archived": false,
       "properties": {
-        "Tags": { "id": "SHJk", "type": "multi_select", "multi_select": [] },
+        "Tags": {
+          "id": "SHJk",
+          "type": "multi_select",
+          "multi_select": []
+        },
         "Created": {
           "id": "%60xV%5C",
           "type": "created_time",
           "created_time": "2022-10-27T15:26:00.000Z"
         },
-        "Name": { "id": "title", "type": "title", "title": [] }
+        "Name": {
+          "id": "title",
+          "type": "title",
+          "title": []
+        }
       },
       "url": "https://www.notion.so/742250015e1640baa6056f4d3ffff056"
     },
@@ -166,7 +186,10 @@
         "id": "1735f0bd-d9a6-40e3-9780-de77c88e145a"
       },
       "cover": null,
-      "icon": { "type": "emoji", "emoji": "📊" },
+      "icon": {
+        "type": "emoji",
+        "emoji": "📊"
+      },
       "parent": {
         "type": "database_id",
         "database_id": "b1f65b43-7a8f-4ee2-8007-1c0a5db20d06"
@@ -195,7 +218,10 @@
           "title": [
             {
               "type": "text",
-              "text": { "content": "test1", "link": null },
+              "text": {
+                "content": "test1",
+                "link": null
+              },
               "annotations": {
                 "bold": false,
                 "italic": false,
