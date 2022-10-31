@@ -43,10 +43,9 @@ def create_page(database_id:str, headers:dict, page_content:dict):
 	res = requests.request("POST", create_url, headers=headers, data=data)
 
 	print(res.status_code)
-	print(res.content)
 
 # ----------PROGRAM----------
-read_page("f362fa40-177b-4324-ba6e-cb85da09af4e", headers)
+#read_page("f362fa40-177b-4324-ba6e-cb85da09af4e", headers)
 
 page_content = {
     "object": "page",
@@ -61,13 +60,13 @@ page_content = {
         "object": "user",
         "id": "1735f0bd-d9a6-40e3-9780-de77c88e145a"
     },
-    "cover": null,
-    "icon": null,
+    "cover": None,
+    "icon": None,
     "parent": {
         "type": "database_id",
         "database_id": "b1f65b43-7a8f-4ee2-8007-1c0a5db20d06"
     },
-    "archived": false,
+    "archived": False,
     "properties": {
         "Source": {
             "id": "%40NFs",
@@ -103,22 +102,24 @@ page_content = {
                 {
                     "type": "text",
                     "text": {
-                        "content": "Tuesday 25 October 2022",
-                        "link": null
+                        "content": "Monday 26 October 2022",
+                        "link": None
                     },
                     "annotations": {
-                        "bold": false,
-                        "italic": false,
-                        "strikethrough": false,
-                        "underline": false,
-                        "code": false,
+                        "bold": False,
+                        "italic": False,
+                        "strikethrough": False,
+                        "underline": False,
+                        "code": False,
                         "color": "default"
                     },
                     "plain_text": "Tuesday 25 October 2022",
-                    "href": null
+                    "href": None
                 }
             ]
         }
     },
     "url": "https://www.notion.so/Tuesday-25-October-2022-f362fa40177b4324ba6ecb85da09af4e"
 }
+
+create_page(database_id, headers, page_content)
