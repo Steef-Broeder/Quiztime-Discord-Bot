@@ -18,7 +18,7 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if message.content.startswith('$hello'):
+    if message.content.startswith('>Make'):
         await message.channel.send('Hello!')
 
 client.run(token=data["discord_token"])
